@@ -7,8 +7,7 @@ respectively. When **GetDocs()** is called it displays details of all codes docu
 The screenshot of the sample display of our output code shows the following:
 
 
-!["1st screenshot"](https://github.com/kendrickchibueze/-Modern-Node-on-AWS/blob/main/Screenshot%20(475).png?raw=true)
-!["2nd screenshot](https://github.com/kendrickchibueze/-Modern-Node-on-AWS/blob/main/Screenshot%20(476).png?raw=true)
+!["1st screenshot"](https://github.com/kendrickchibueze/-Modern-Node-on-AWS/blob/main/Screenshot%20(475).png?raw=true)!["2nd screenshot](https://github.com/kendrickchibueze/-Modern-Node-on-AWS/blob/main/Screenshot%20(476).png?raw=true)
 
 ## Software Development Summary😃👓👓
 * **Technology**: C#👓
