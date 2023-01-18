@@ -1,4 +1,6 @@
-﻿namespace AttributeLibrary
+﻿using System.Reflection;
+
+namespace AttributeLibrary
 {
     [AttributeUsage(AttributeTargets.All)]
     public class DocumentAttribute : Attribute
@@ -19,5 +21,8 @@
             Input = input;
             Output = output;
         }
+
+
+       
     }
 }

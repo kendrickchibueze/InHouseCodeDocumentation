@@ -1,19 +1,23 @@
-﻿namespace CodeDocumentation
+﻿using System.Reflection;
+
+namespace CodeDocumentation
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("************Code Documentation********");
+
+
+            Utility.PrintColorMessage(ConsoleColor.Yellow, "************ Welcome to the In-House Code Documentation Tool********\n\n");
 
 
 
-            InHouse.GetDocs();
-            //OptimizeTwo.GetDocs();
 
-            //Optimize.GetDocs();
+            InHouseCode.GetDocs();
 
-            //DisplayMethods.DisplayPropertiesInAssembly("AttributeLibrary.dll");
+           
+
+
         }
     }
 }
