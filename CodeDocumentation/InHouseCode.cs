@@ -42,11 +42,10 @@ namespace CodeDocumentation
           
         }
 
-        // Display methods
+       
 
         private static void DisplayMethods(Type type)
         {
-            
             var methods = type.GetMethods();
 
             foreach (var method in methods)
@@ -59,14 +58,21 @@ namespace CodeDocumentation
 
                     Utility.PrintColorMessage(ConsoleColor.Yellow, "\t Description: " + documentattribute.Description);
 
-                    Utility.PrintColorMessage(ConsoleColor.Yellow, "\t Input: " + documentattribute.Input);
+                    if (!string.IsNullOrEmpty(documentattribute.Input))
+                    {
+                        Utility.PrintColorMessage(ConsoleColor.Yellow, "\t Input: " + documentattribute.Input);
+                    }
 
-                    Utility.PrintColorMessage(ConsoleColor.Yellow, "\t Output: " + documentattribute.Output + "\n");
+                    if (!string.IsNullOrEmpty(documentattribute.Output))
+                    {
+                        Utility.PrintColorMessage(ConsoleColor.Yellow, "\t Output: " + documentattribute.Output + "\n");
+                    }
                 }
-
-
             }
         }
+
+
+
 
 
         // Display properties
@@ -75,8 +81,10 @@ namespace CodeDocumentation
         {
             
             var properties = type.GetProperties();
+
             foreach (var property in properties)
             {
+                //Gets custom attribute  to property variable. The returned attribute is then being assigned to the documentattribute variable.
                 var documentattribute = (DocumentAttribute)property.GetCustomAttribute(typeof(DocumentAttribute));
 
                 if (documentattribute != null)
@@ -107,9 +115,15 @@ namespace CodeDocumentation
 
                     Utility.PrintColorMessage(ConsoleColor.Cyan, "\t Description: " + documentattribute.Description);
 
-                    Utility.PrintColorMessage(ConsoleColor.Cyan, "\t Input: " + documentattribute.Input);
+                    if (!string.IsNullOrEmpty(documentattribute.Input))
+                    {
+                        Utility.PrintColorMessage(ConsoleColor.Yellow, "\t Input: " + documentattribute.Input);
+                    }
 
-                    Utility.PrintColorMessage(ConsoleColor.Cyan, "\t Output: " + documentattribute.Output + "\n");
+                    if (!string.IsNullOrEmpty(documentattribute.Output))
+                    {
+                        Utility.PrintColorMessage(ConsoleColor.Yellow, "\t Output: " + documentattribute.Output + "\n");
+                    }
                 }
 
             }
